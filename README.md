@@ -14,7 +14,7 @@ Main ERC223 contracts:
 
 ### Extensions of the base functionality
 
-- [ERC223Mintable.sol](https://github.com/Dexaran/ERC223-token-standard/blob/development/token/ERC223/ERC223Mintable.sol): Minting functinality for ERC223 tokens. Use `contract MyToken is ERC223Mintable` to make your token mintable. The address you used to deploy this contract will receive Minter functinality and will be allowed to assign new minters and increase the totalSupply of the token.
+- [ERC223Mintable.sol](https://github.com/Dexaran/ERC223-token-standard/blob/development/token/ERC223/ERC223Mintable.sol): Minting functionality for ERC223 tokens. Use `contract MyToken is ERC223Mintable` to make your token mintable. The address you used to deploy this contract will receive Minter functionality and will be allowed to assign new minters and increase the totalSupply of the token.
 
 - [ERC223Burnable.sol](https://github.com/Dexaran/ERC223-token-standard/blob/development/token/ERC223/ERC223Burnable.sol): Burning functionality implementation for ERC223 tokens. Use `contract MyToken is ERC223Burnable` to make your token burnable. Allows any address to burn its tokens by calling the `burn` function of the contract. There is no possibility to burn someone else's tokens in this implementation.
 
@@ -68,7 +68,7 @@ Here is a description of the ERC20 token standard problem that is solved by ERC2
 
 ERC20 token standard is leading to money losses for end users. The main problem is lack of possibility to handle incoming ERC20 transactions, that were performed via `transfer` function of ERC20 token.
 
-If you send 100 ETH to a contract that is not intended to work with Ether, then it will reject a transaction and nothing bad will happen. If you will send 100 ERC20 tokens to a contract that is not intended to work with ERC20 tokens, then it will not reject tokens because it cant recognize an incoming transaction. As the result, your tokens will get stuck at the contracts balance.
+If you send 100 ETH to a contract that is not intended to work with Ether, then it will reject a transaction and nothing bad will happen. If you will send 100 ERC20 tokens to a contract that is not intended to work with ERC20 tokens, then it will not reject tokens because it can't recognize an incoming transaction. As the result, your tokens will get stuck at the contracts balance.
 
 How much ERC20 tokens are currently lost (31 Dec, 2017):
 
